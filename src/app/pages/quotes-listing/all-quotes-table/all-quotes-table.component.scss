@@ -1,0 +1,18 @@
+.new-quote-btn {
+    position: absolute;
+    right: 24px;
+    margin-top: 8px;
+}
+
+.body-content {
+
+}
+.quotes-content {
+    &__table {
+        padding-top: 24px;
+        .table-container {
+            padding: 24px 40px;
+            background-color: #FFFFFF;
+        }
+    }
+}

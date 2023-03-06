@@ -1,0 +1,112 @@
+<div class="content">
+    <app-page-header [headerContent]="headerContent"></app-page-header>
+    <div class="dashboard-cards-container">
+        <div class="card">
+            <div class="card-subtitle">
+                <mat-icon class="material-icons">edit_document</mat-icon>
+                <span>Your Quotes</span>
+            </div>
+            <div class="card-content">
+                <div class="card-content-title">45 Quotes</div>
+                <div class="card-content-label">for your action</div>
+            </div>
+            <button class="btn btn-default view-btn">View All</button>
+        </div>
+        <div class="card">
+            <div class="card-subtitle">
+                <mat-icon class="material-icons">restore_page</mat-icon>
+                <span>Your Renewals</span>
+            </div>
+            <div class="card-content">
+                <div class="card-content-title">16 Policies</div>
+                <div class="card-content-label">Due for renewal</div>
+                <div class="card-content-label">(within 45 days)</div>
+            </div>
+            <button class="btn btn-default view-btn">View All</button>
+        </div>
+        <div class="card">
+            <div class="card-subtitle">
+                <mat-icon class="material-icons">file_open</mat-icon>
+                <span>Your Referrals</span>
+            </div>
+            <div class="card-content">
+                <!-- <div class="card-content-title">&nbsp;</div> -->
+                <div class="card-content-label">Referred to me</div>
+                <div class="card-content-label">Referred by me</div>
+            </div>
+            <button class="btn btn-default view-btn">View All</button>
+        </div>
+        <div class="card">
+            <div class="card-subtitle">
+                <mat-icon class="material-icons">notifications</mat-icon>
+                <span>Your Notifications</span>
+            </div>
+            <div class="card-content">
+                <div class="card-content-title">45 Quotes</div>
+            </div>
+            <button class="btn btn-default view-btn">View All</button>
+        </div>
+    </div>
+    <div class="dashboard-items">
+        <div class="dashboard-items__recently-accessed">
+            <div class="dashboard-items__recently-accessed-subtitle">
+                <span>Recently Accessed</span>
+                <mat-icon class="material-icons">link</mat-icon>
+            </div>
+            <ul class="re-list">
+                <li class="re-list__item" *ngFor="let item of recentlyAccessed; index as i;">
+                    <div class="re-list__item-left">
+                        <span class="re-list__item-left__insured">{{ item.insuredName }}</span>
+                        <span class="re-list__item-left__product">{{ item.productType }}</span>
+                    </div>
+                    <div class="re-list__item-right">
+                        <span class="re-list__item-right-label">Quote</span>
+                        <span class="re-list__item-right-ref">{{ item.referenceNumber }}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard-items__tasks-due">
+            <div class="dashboard-items__tasks-due-subtitle">
+                <span>Task due</span>
+                <mat-icon class="material-icons">content_paste</mat-icon>
+            </div>
+            <div class="dashboard-items__tasks-due-table">
+                <table class="chubb-table">
+                    <tr class="chubb-table__header">
+                        <th>
+                            <span>Due Date</span>
+                        </th>
+                        <th>
+                            <span>Type</span>
+                        </th>
+                        <th>
+                            <span>Status</span>
+                        </th>
+                        <th>
+                            <span>Ref No.</span>
+                        </th>
+                        <th>
+                            <span>Assigned to</span>
+                        </th>
+                    </tr>
+                    <tr class="chubb-table__row" *ngFor="let task of tasks;; index as i;">
+                        <td>
+                            <mat-icon class="material-icons-outlined">warning</mat-icon>
+                            {{ task.dueDate }}
+                        </td>
+                        <td>
+                            <span class="bold">{{ task.type }}</span>
+                        </td>
+                        <td>
+                            <app-status-chip [status]="task.status"></app-status-chip>
+                        </td>
+                        <td>{{ task.refNo }}</td>
+                        <td>{{ task.assignedTo }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

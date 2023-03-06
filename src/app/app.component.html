@@ -1,0 +1,41 @@
+<div class="header">
+  <img src="../assets/img/desktop/chubb-logo.png" alt="chubb-logo">
+  <div class="form-group col-2 policy-module-dropdown" >
+    <select class="form-select outline" id="select" aria-label="Default select example" >
+        <option selected>Policy Module</option>
+        <option value="1">Policy Number</option>
+        <option value="2">Quote Number</option>
+      </select>
+  </div>
+  <div class="header-search">
+    <button class="btn btn-light logout-btn" type="button" id="dropdownMenuButton1"  aria-expanded="false">
+      <mat-icon class="material-icons">logout</mat-icon>
+    </button>
+    <button class="btn btn-primary search-btn" type="button" id="dropdownMenuButton1"  aria-expanded="false">
+      <div class="btn-label">Search</div>
+    </button>
+    <!-- <input type="text" class="form-control" placeholder="Search"> -->
+    <div class="form-group col-2 search-field">
+      <input type="email" class="form-control" id="search" placeholder="Ex: QR0123456789">
+    </div>
+    <div class="form-group col-2 policy-dropdown" >
+      <select class="form-select outline" id="select" aria-label="Default select example" placeholder="Policy/Quote Number">
+          <option selected>Please select</option>
+          <option value="1">Policy Number</option>
+          <option value="2">Quote Number</option>
+        </select>
+  </div>
+  </div>
+        
+</div>
+<div class="body">
+  <!-- <ul class="sidenav">
+    <li class="sidenav-item" *ngFor="let menu of menuList; index as i;" [routerLink]="menu.route">
+      <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+      {{ menu.label }}</li>
+   </ul> -->
+   <app-side-nav></app-side-nav>
+  <router-outlet></router-outlet>
+</div>
+
+

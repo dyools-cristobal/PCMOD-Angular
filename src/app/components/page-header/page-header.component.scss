@@ -1,0 +1,30 @@
+@import '../../../assets/css/theme.scss';
+
+.content-header {
+    font-family: "Chubb Publico Light";
+    width: 100%;
+    padding: 2rem 40px;
+    background-color: $turquoise;
+    display: flex;
+
+    &__title {
+        color: #150F96;
+        flex: 4;
+
+        &-subtitle {
+            font-size: 14px;
+        }
+
+        &-title {
+            font-size: 40px;
+
+            .task-number {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .header-action {
+        margin-top: 10px;
+    }
+}

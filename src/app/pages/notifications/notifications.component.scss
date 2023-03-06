@@ -1,0 +1,51 @@
+@import '../../../assets/css/theme.scss';
+
+.notification-container {
+    .notification {
+        padding: 2rem;
+        border-bottom: .5px solid $light-gray;
+
+        &__message {
+            font-size: 14px;
+            display: flex;
+
+            &--text {
+                flex: 2;
+            }
+
+
+        }
+
+        &__status {
+            display: flex;
+
+            &--container {
+                flex: 2;
+
+                .material-icons {
+                    margin: 0px 2rem;
+                }
+            }
+
+            &--date {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .unread {
+        background-color: $sky-gray;
+        border-left: 3px solid turquoise;
+
+        .notification__message {
+            &--text {
+                span::before {
+                    content: '•';
+                    font-size: 24px;
+                    line-height: normal;
+                    color: turquoise;
+                }
+            }
+        }
+    }
+}

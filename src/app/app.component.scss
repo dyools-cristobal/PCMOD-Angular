@@ -1,0 +1,88 @@
+@import '../assets/css/theme.scss';
+
+.header {
+    display: flex;
+    padding: 1rem 2rem;
+    border-bottom: #150F96 2px solid;
+    position: absolute;
+    background: white;
+    width: 100%;
+
+    img {
+        height: 20px;
+        width: auto;
+        margin: 1rem;
+        background-color: #FFFFFF;
+    }
+
+    .policy-module-dropdown {
+        width: 240px;
+        text-align: left;
+        background-color: $white;
+        margin-left: 24px;
+
+        select {
+            background-color: $white;
+            border: none;
+        }
+    }
+
+    .header-search {
+        display: flex;
+        flex-direction: row-reverse;
+        width: -webkit-fill-available;
+
+        .search-field {
+            margin-right: 8px;
+            border: 1px solid gray;
+
+            input {
+                background-color: $white;
+                border: none;
+            }
+        }
+
+        .policy-dropdown {
+            width: 240px;
+            text-align: left;
+            border: 1px solid gray;
+            background-color: $white;
+            margin-right: 8px;
+
+            select {
+                background-color: $white;
+                border: none;
+            }
+        }
+
+        .policy-dropdown::after {
+            position: absolute;
+            right: 0;
+            margin-right: 10px;
+            margin-top: 6px;
+        }
+
+        button {
+            margin-right: .5rem;
+        }
+
+        .search-btn {
+            width: 108px;
+            background-color: #150F96;
+
+        }
+
+        .logout-btn {
+            border: 1px solid gray;
+            width: 52px;
+            padding: 11px 12px;
+        }
+    }
+}
+
+.body {
+    display: flex;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 66px;
+}

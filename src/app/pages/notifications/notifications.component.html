@@ -1,0 +1,88 @@
+<div class="content">
+    <app-page-header [headerContent]="headerContent"></app-page-header>
+    <div class="body-content">
+        <div class="body-content__filter-container">
+            <div class="body-content__filter-container__filters">
+                <span class="body-content__filter-container__filters-title">Filters</span>
+                <div class="body-content__filter-container__filters-controls">
+                    <div class="row">
+                        <div class="form-group col-sm">
+                            <label for="select" class="form-label">Notification Status</label>
+                            <select class="form-select" id="select" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm">
+                            <label for="select" class="form-label">Type</label>
+                            <select class="form-select" id="select" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm">
+                            <label for="select" class="form-label">Transaction</label>
+                            <select class="form-select" id="select" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm">
+                            <label for="select" class="form-label">Status</label>
+                            <select class="form-select" id="select" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-container">
+        <div class="notification-container">
+            <div class="notification" *ngFor="let notification of notifications; index as i;"
+                [class.unread]="notification.read">
+                <div class="notification__message">
+                    <div class="notification__message--text">
+                        <span>
+                            {{ message(notification) }}
+                        </span>
+                    </div>
+                    <div class="notification__message--action">
+                        <mat-icon class="material-icons" [matMenuTriggerFor]="menu">more_vert</mat-icon>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item><mat-icon class="material-icons">search</mat-icon> View
+                                Details</button>
+                            <button mat-menu-item (click)="setReadUnread(i)"><mat-icon
+                                    class="material-icons">check</mat-icon> Mark as
+                                {{readUnreadText(notification.read)}}</button>
+
+                        </mat-menu>
+
+                    </div>
+                </div>
+                <div class="notification__status">
+                    <div class="notification__status--container">
+                        <app-status-chip [status]="notification.statusPrev"></app-status-chip>
+                        <mat-icon class="material-icons">arrow_forward</mat-icon>
+                        <app-status-chip [status]="notification.statusTo"></app-status-chip>
+                    </div>
+                    <div class="notification__status--date">
+                        {{ notification.dateRecieved }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

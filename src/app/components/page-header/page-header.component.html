@@ -1,0 +1,11 @@
+<div class="content-header">
+    <div class="content-header__title">
+        <div class="content-header__title-subtitle">{{ headerContent.subtitle }}</div>
+        <div class="content-header__title-title">{{headerContent.title }}</div>
+    </div>
+    <button class="btn btn-primary header-action" type="button" *ngIf="checkAction()"
+        [routerLink]="headerContent.actionLink">
+        <mat-icon class="material-icons">{{ headerContent.actionIcon }}</mat-icon>
+        <div>{{ headerContent.actionLabel }}</div>
+    </button>
+</div>

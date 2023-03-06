@@ -1,0 +1,182 @@
+@import './chubb-fonts.scss';
+@import './helpers.scss';
+@import './variables';
+
+body {
+    color: #4B4E53 !important;
+}
+
+.form-group {
+    .form-label {
+        font-family: "Lato";
+        font-size: 12px;
+    }
+
+    .form-control {
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: none !important;
+        font-size: 14px;
+        border-bottom: 2px #AFAFAF solid;
+        border-radius: 0px;
+        background-color: #F4F4F4;
+    }
+
+    .form-select {
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: none !important;
+        font-size: 14px;
+        border-bottom: 2px #AFAFAF solid;
+        height: 42px;
+        border-radius: 0px;
+        background-color: #F4F4F4;
+    }
+
+    .input-group {
+        .input-group-text {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 2px solid $light-gray;
+            border-radius: 0px;
+            background-color: $sky-gray;
+        }
+    }
+}
+
+.nav {
+    &-item {
+        border-right: none;
+        border-left: none;
+        border-radius: 0px;
+        background-color: $white;
+
+        .nav-link {
+            padding: 20px 70px;
+            font-family: "Chubb Publico";
+            font-size: 20px;
+            color: #4B4E53;
+        }
+
+        .active {
+            border-top: 2px turquoise solid !important;
+            border-right-color: transparent !important;
+            border-left-color: transparent !important;
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+        }
+    }
+
+    &-item:hover {
+        cursor: pointer;
+        background-color: $sky-gray;
+    }
+
+}
+
+
+button {
+    height: 42px;
+    border-radius: 0px !important;
+}
+
+input {
+    height: 42px !important;
+    border-radius: 0px !important;
+    font-size: 1.5rem;
+}
+
+.chubb-table {
+    width: 100%;
+
+    &__header {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Chubb Publico";
+
+        th {
+            padding: 16px 16px 16px 0px;
+            border-bottom: 3px solid turquoise;
+        }
+    }
+
+    &__row {
+        font-size: 14px;
+        font-family: "Lato";
+
+        td {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid lightgray;
+        }
+    }
+}
+
+.chip {
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-family: 'Verdana';
+
+    &__new {
+        border: 1px solid $purple;
+        color: $purple;
+    }
+
+    &__in-progress {
+        border: 1px solid $info;
+        color: $info;
+    }
+
+    &__reviewing {
+        border: 1px solid $info;
+        color: $info;
+    }
+
+    &__referral-pending-info {
+        border: 1px solid $info;
+        color: $info;
+    }
+
+    &__under-review {
+        border: 1px solid $alert;
+        color: $alert;
+    }
+
+    &__unsuccessful {
+        border: 1px solid $error;
+        color: $error;
+    }
+
+    &__referral-declined {
+        border: 1px solid $error;
+        color: $error;
+    }
+
+    &__bound {
+        border: 1px solid $dark-green;
+        color: $error;
+    }
+
+}
+
+.link {
+    color: $chubb-blue;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+select {
+    font-family: "Chubb Publico";
+}
+
+.row {
+    margin-bottom: 10px;
+}

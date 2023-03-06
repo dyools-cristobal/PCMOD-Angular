@@ -1,0 +1,111 @@
+<div class="content">
+    <app-page-header [headerContent]="headerContent"></app-page-header>
+    <div class="body-content">
+        <div class="body-content__filter-container">
+            <div class="body-content__filter-container__filters">
+                <span class="body-content__filter-container__filters-title">Filters</span>
+                <div class="body-content__filter-container__filters-controls">
+                    <div class="row">
+                        <div class="form-group col-sm-11">
+                            <div class="input-group">
+                                <input type="email" class="form-control" id="search" placeholder="Search">
+                                <span class="input-group-text">
+                                    <mat-icon class="material-icons">search</mat-icon>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <button class="btn btn-primary header-action" type="button">
+                                <div>Search</div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row" *ngIf="expandSearch.show">
+                        <div class="row">
+                            <div class="form-group col-sm">
+                                <label for="select" class="form-label">Type</label>
+                                <select class="form-select" id="select" aria-label="Default select example">
+                                    <option selected></option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="select" class="form-label">Status</label>
+                                <select class="form-select" id="select" aria-label="Default select example">
+                                    <option selected></option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="select" class="form-label">Products</label>
+                                <select class="form-select" id="select" aria-label="Default select example">
+                                    <option selected></option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="select" class="form-label">Handling UW</label>
+                                <select class="form-select" id="select" aria-label="Default select example">
+                                    <option selected></option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-3">
+                                <label for="search" class="form-label">Inception date from</label>
+                                <input type="date" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="search" class="form-label">Inception date to</label>
+                                <input type="date" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="search" class="form-label">Expiry Date from</label>
+                                <input type="date" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="search" class="form-label">Expiry Date to</label>
+                                <input type="date" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-3">
+                                <label for="select" class="form-label">Producer</label>
+                                <select class="form-select" id="select" aria-label="Default select example">
+                                    <option selected></option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="search" class="form-label">Last Updated from</label>
+                                <input type="date" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="search" class="form-label">Last Updated from</label>
+                                <input type="date" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="advanced-search" (click)="expandSearchPanel()">
+                            {{expandSearch.title}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

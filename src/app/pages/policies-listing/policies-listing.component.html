@@ -1,0 +1,67 @@
+<div class="content">
+    <app-page-header [headerContent]="headerContent"></app-page-header>
+    <div class="body-content">
+        <div class="body-content__filter-container">
+            <div class="body-content__filter-container__filters">
+                <span class="body-content__filter-container__filters-title">Filters</span>
+                <div class="body-content__filter-container__filters-controls">
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label for="search" class="form-label">Search referral by quote/policy number or insured
+                                name</label>
+                            <input type="email" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                        </div>
+                        <div class="form-group col-sm">
+                            <label for="select" class="form-label">Type of Policy</label>
+                            <select class="form-select" id="select" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm">
+                            <label for="select" class="form-label">Status</label>
+                            <select class="form-select" id="select" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm">
+                            <label for="select" class="form-label">Producer</label>
+                            <select class="form-select" id="select" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col-3">
+                            <label for="search" class="form-label">Policy Inception Start</label>
+                            <input type="date" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                        </div>
+                        <div class="form-group col-3">
+                            <label for="search" class="form-label">Policy Inception End</label>
+                            <input type="date" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                        </div>
+                        <div class="form-group col-3">
+                            <label for="search" class="form-label">Policy Expiry Start</label>
+                            <input type="date" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                        </div>
+                        <div class="form-group col-3">
+                            <label for="search" class="form-label">Policy Expiry End</label>
+                            <input type="date" class="form-control" id="search" placeholder="Ex: QR0123456789">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-chubb-table [tableData]="myQuotes"></app-chubb-table>
+
+</div>

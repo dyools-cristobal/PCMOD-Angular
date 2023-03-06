@@ -1,0 +1,53 @@
+// Text helpers
+@import './variables';
+
+.bold {
+    font-family: "Lato-Bold";
+    font-weight: 600;
+}
+
+// Layout helpers
+
+.flex {
+    display: flex;
+}
+
+.success {
+    color: $success;
+}
+
+.alert {
+    color: $alert;
+}
+
+.error {
+    color: $error;
+}
+
+// Chubb buttons
+
+.btn {
+    height: 42px;
+    font-size: 14px !important;
+    display: flex !important;
+    &-label {
+        width: 100%;
+        text-align: center;
+    }
+    mat-icon {
+        font-size: 18px;
+    }
+    
+}
+.btn-primary {
+    font-family: "Chubb Publico Light" !important;
+    border: none;
+    background: $chubb-blue !important;
+    padding: 11px 24px !important;
+}
+
+// Color helpers
+
+.is-blue {
+    color: $chubb-blue;
+}
